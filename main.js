@@ -10,7 +10,7 @@ Webcam.set({
   Webcam.attach( '#camera' );
   
       
-  function take_snapshot()
+  function snapshot()
   {
     Webcam.snap(function(data_uri) {
         document.getElementById("result").innerHTML = '<img id="captured_image" src="'+data_uri+'"/>';
@@ -28,7 +28,7 @@ Webcam.set({
       
   function check()
   {
-    img = document.getElementById('captured_image').src;
+    img = document.getElementById('captured_image');
     classifier.classify(img, gotResult);
   }
   
