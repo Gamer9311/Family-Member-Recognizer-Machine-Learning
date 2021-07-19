@@ -28,7 +28,7 @@ Webcam.set({
       
   function check()
   {
-    img = document.getElementById('captured_image');
+    img = document.getElementById('captured_image').src;
     classifier.classify(img, gotResult);
   }
   
